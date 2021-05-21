@@ -84,26 +84,32 @@ export const UniWebSocket: WebSocketConstructor =  class UniSocket implements We
         const socket = uni.connectSocket(connectOption) as UniSocketTask;
         socket!.onOpen(() => {
             if (self.onopen) {
-                self.onopen(new Event("open"));
+                const ev: Event = { type: "open" } as Event;
+                self.onopen(ev);
+                // self.onopen(new Event("open"));
             }
         });
-        socket!.onClose(() => {
+        socket!.onClose((reason) => {
             if (self.onclose) {
-                self.onclose(new CloseEvent("close", {
-                    /** Warn: incorrect */
-                    wasClean: true,
-                    code: 1000,
-                }));
+                self.onclose(reason);
+                // self.onclose(new CloseEvent("close", {
+                //     /** Warn: incorrect */
+                //     wasClean: true,
+                //     code: 1000,
+                // }));
             }
         });
         socket!.onError(() => {
             if (self.onerror) {
-                self.onerror(new Event("error"));
+                const ev = { type: "error" } as Event;
+                self.onerror(ev);
+                // self.onerror(new Event("error"));
             }
         });
         socket!.onMessage((result) => {
             if (self.onmessage) {
-                self.onmessage(new MessageEvent("message", { data: result.data }));
+                const ev = { data: result.data } as MessageEvent;
+                self.onmessage(ev);
             }
         });
     }
