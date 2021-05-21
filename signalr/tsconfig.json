@@ -1,0 +1,9 @@
+{
+    "extends": "../tsconfig.base.json",
+    "compilerOptions": {
+        "types": ["@dcloudio/types", "node", "jest", "eventsource", "tough-cookie", "es6-promise"]
+    },
+    "include": [
+        "./src/**/*"
+    ]
+}
