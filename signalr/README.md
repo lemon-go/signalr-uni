@@ -1,11 +1,9 @@
-JavaScript and TypeScript clients(compatible with [DCloud/uni-app](https://uniapp.dcloud.io/) platform) for SignalR for ASP.NET Core and Azure SignalR Service
+JavaScript and TypeScript clients(compatible with [DCloud/uni-app](https://uniapp.dcloud.io/) platform) for SignalR for ASP.NET Core and Azure SignalR Service.
 
 ## Installation
 
 ```bash
-npm install @microsoft/signalr
-# or
-yarn add @microsoft/signalr
+npm install signalr-uni
 ```
 
 ## Usage
@@ -14,6 +12,9 @@ See the [SignalR Documentation](https://docs.microsoft.com/aspnet/core/signalr) 
 
 For documentation on using this client with Azure SignalR Service and Azure Functions, see the [SignalR Service serverless developer guide](https://docs.microsoft.com/azure/azure-signalr/signalr-concept-serverless-development-config).
 
+### UniApp
+
+To use the client in a uni application, install the package to your `node_modules` folder and use `import { /*MODULE NAME*/ } from 'signalr-uni'` to load the module.
 ### Browser
 
 To use the client in a browser, copy `*.js` files from the `dist/browser` folder to your script folder include on your page using the `<script>` tag.
@@ -25,6 +26,25 @@ To use the client in a webworker, copy `*.js` files from the `dist/webworker` fo
 ### Node.js
 
 To use the client in a NodeJS application, install the package to your `node_modules` folder and use `require('@microsoft/signalr')` to load the module. The object returned by `require('@microsoft/signalr')` has the same members as the global `signalR` object (when used in a browser).
+
+### Example (UniApp)
+
+```javascript
+import { HubConnectionBuilder, LogLevel } from 'signalr-uni';
+
+const connection = new HubConnectionBuilder()
+    .withUrl("https://example.com/signalr/chat")
+    .withAutomaticReconnect([0, 2000, 4000, 8000, 10000, 30000, 60000])
+    .configureLogging(LogLevel.Debug)
+    .build();
+
+connection.on("send", data => {
+    console.log(data);
+});
+
+connection.start()
+    .then(() => connection.invoke("send", "Hello"));
+```
 
 ### Example (Browser)
 
@@ -62,6 +82,7 @@ connection.start()
 ### Example (NodeJS)
 
 ```javascript
+// Use `@microsoft/signalr` instead of `signalr-uni` in a NodeJS application.
 const signalR = require("@microsoft/signalr");
 
 let connection = new signalR.HubConnectionBuilder()

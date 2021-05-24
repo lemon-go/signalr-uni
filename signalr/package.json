@@ -36,12 +36,12 @@
     "type": "git",
     "url": "git+https://github.com/lemon-go/signalr-uni.git"
   },
-  "author": "Microsoft",
+  "author": "Fred Yuan",
   "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/dotnet/aspnetcore/issues"
   },
-  "homepage": "https://github.com/dotnet/aspnetcore/tree/master/src/SignalR#readme",
+  "homepage": "https://github.com/lemon-go/signalr-uni/tree/main/signalr#readme",
   "files": [
     "dist/**/*",
     "src/**/*"
