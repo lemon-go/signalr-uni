@@ -1,7 +1,7 @@
 {
   "name": "signalr-uni",
-  "version": "5.0.5",
-  "description": "ASP.NET Core SignalR Client",
+  "version": "5.1.0",
+  "description": "ASP.NET Core SignalR Client(5.0.5)",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
   "typings": "./dist/esm/index.d.ts",
@@ -47,12 +47,13 @@
     "src/**/*"
   ],
   "devDependencies": {
+    "@dcloudio/types": "^2.2.2",
     "@types/eventsource": "^1.0.2",
     "@types/jest": "^23.3.2",
     "@types/node": "^10.9.4",
     "@types/tough-cookie": "^2.3.6",
-    "es6-promise": "^4.2.2",
-    "@dcloudio/types": "^2.2.2"
+    "@types/wechat-miniprogram": "^3.4.1",
+    "es6-promise": "^4.2.2"
   },
   "dependencies": {
     "abort-controller": "^3.0.0",

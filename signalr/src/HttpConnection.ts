@@ -12,6 +12,7 @@ import { ServerSentEventsTransport } from "./ServerSentEventsTransport";
 import { UniWebSocket } from "./UniWebSocket";
 import { Arg, createLogger, getUserAgentHeader, Platform } from "./Utils";
 import { WebSocketTransport } from "./WebSocketTransport";
+import { WxWebSocket } from "./WxWebSocket";
 
 /** @private */
 const enum ConnectionState {
@@ -92,6 +93,8 @@ export class HttpConnection implements IConnection {
 
         if (Platform.isUni && !options.WebSocket) {
             options.WebSocket = UniWebSocket;
+        } else if (Platform.isWechatMP && !options.WebSocket) {
+            options.WebSocket = WxWebSocket;
         } else if (!Platform.isNode && typeof WebSocket !== "undefined" && !options.WebSocket) {
             options.WebSocket = WebSocket;
         } else if (Platform.isNode && !options.WebSocket) {

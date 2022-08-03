@@ -47,8 +47,12 @@ export class Platform {
         return typeof uni === "object";
     }
 
+    public static get isWechatMP(): boolean {
+        return typeof wx === "object" && typeof uni === "undefined";
+    }
+
     public static get isNode(): boolean {
-        return !this.isBrowser && !this.isWebWorker && !this.isUni;
+        return !this.isBrowser && !this.isWebWorker && !this.isUni && !this.isWechatMP;
     }
 }
 

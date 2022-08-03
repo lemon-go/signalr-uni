@@ -53,7 +53,7 @@ export class WebSocketTransport implements ITransport {
             const cookies = this.httpClient.getCookieString(url);
             let opened = false;
 
-            if (Platform.isUni) {
+            if (Platform.isUni || Platform.isWechatMP) {
                 webSocket = new this.webSocketConstructor(url, undefined, {
                     headers: this.headers,
                 });
@@ -107,7 +107,7 @@ export class WebSocketTransport implements ITransport {
                     try {
                         this.onreceive(message.data);
                     } catch (error) {
-                        this.close(error);
+                        this.close(error as Error);
                         return;
                     }
                 }

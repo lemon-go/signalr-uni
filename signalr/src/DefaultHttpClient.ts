@@ -7,6 +7,7 @@ import { HttpClient, HttpRequest, HttpResponse } from "./HttpClient";
 import { ILogger } from "./ILogger";
 import { UniHttpClient } from "./UniHttpClient";
 import { Platform } from "./Utils";
+import { WxHttpClient } from "./WxHttpClient";
 import { XhrHttpClient } from "./XhrHttpClient";
 
 /** Default implementation of {@link @microsoft/signalr.HttpClient}. */
@@ -19,6 +20,8 @@ export class DefaultHttpClient extends HttpClient {
 
         if (Platform.isUni) {
             this.httpClient = new UniHttpClient(logger);
+        } else if (Platform.isWechatMP) {
+            this.httpClient = new WxHttpClient(logger);
         } else if (typeof fetch !== "undefined" || Platform.isNode) {
             this.httpClient = new FetchHttpClient(logger);
         } else if (typeof XMLHttpRequest !== "undefined") {

@@ -2,3 +2,7 @@
 # yarn lockfile v1
 
 
+"@types/wechat-miniprogram@^3.4.1":
+  "integrity" "sha512-szbuYR32VotxNQNQ4YyQ6Ob3ya0tLY0zpf/xvi6DF8Oqb+0Y+5CL5BpxS+4wBSJvlu3VfSXhjxZ0ze1a3l16Pw=="
+  "resolved" "https://registry.npmjs.org/@types/wechat-miniprogram/-/wechat-miniprogram-3.4.1.tgz"
+  "version" "3.4.1"

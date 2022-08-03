@@ -1,14 +1,13 @@
 import { WebSocketConstructor } from "./Polyfills";
 
-type UniSocketTask = UniApp.SocketTask & { readyState: number };
+type WxSocketTask = (WechatMiniprogram.SocketTask & { readyState: number });
 
 /**
- * 兼容 Uni app 平台的 WebSocket 连接实现。
+ * 兼容微信小程序平台的 WebSocket 连接实现。
  * @author Fred Yuan
- * @see uni-doc https://uniapp.dcloud.io/api/request/websocket
- *              https://github.com/dcloudio/uni-app/blob/master/src/core/service/api/network/socket.js
+ * @see doc https://developers.weixin.qq.com/miniprogram/dev/api/network/websocket/SocketTask.html
  */
-export const UniWebSocket: WebSocketConstructor =  class UniSocket implements WebSocket {
+export const WxWebSocket: WebSocketConstructor =  class WxSocket implements WebSocket {
     public get url() { return this._url; }
     public binaryType: BinaryType = "blob";
     public get bufferedAmount() { return 0; }
@@ -25,7 +24,7 @@ export const UniWebSocket: WebSocketConstructor =  class UniSocket implements We
     // tslint:disable-next-line:variable-name
     private _url: string;
     // tslint:disable-next-line:variable-name
-    private _socket: UniSocketTask;
+    private _socket: WxSocketTask;
 
     constructor(url: string, protocols?: string | string[], options?: any) {
         this._url = url;
@@ -38,16 +37,15 @@ export const UniWebSocket: WebSocketConstructor =  class UniSocket implements We
         }
 
         const header = { "Content-Type": "application/json" };
-        const connectOption: UniApp.ConnectSocketOption = {
+        const connectOption: WechatMiniprogram.ConnectSocketOption = {
             url,
             header,
-            method: "GET",
             protocols: _protocols,
             success(res) {
-                console.log("[UniWebSocket] uni.connectSocket invoke success.", res);
+                console.log("[WxWebSocket] wx.connectSocket invoke success.", res);
             },
             fail(err) {
-                console.error("[UniWebSocket] uni.connectSocket invoke faild.", err);
+                console.error("[WxWebSocket] wx.connectSocket invoke faild.", err);
             },
         };
         if (typeof options === "object") {
@@ -55,9 +53,6 @@ export const UniWebSocket: WebSocketConstructor =  class UniSocket implements We
                 connectOption.header = { ...header, ...options.header };
             } else if (typeof options.headers === "object") {
                 connectOption.header = { ...header, ...options.headers };
-            }
-            if (typeof options.method === "string") {
-                connectOption.method = options.method.toUpperCase();
             }
             if (typeof options.protocols === "string") {
                 if (!connectOption.protocols) {
@@ -74,7 +69,7 @@ export const UniWebSocket: WebSocketConstructor =  class UniSocket implements We
             }
         }
 
-        const socket = uni.connectSocket(connectOption) as UniSocketTask;
+        const socket = wx.connectSocket(connectOption) as WxSocketTask;
         this._socket = socket;
         socket.onOpen(() => {
             if (this.onopen) {
@@ -85,10 +80,8 @@ export const UniWebSocket: WebSocketConstructor =  class UniSocket implements We
         });
         socket.onClose((reason) => {
             if (this.onclose) {
-                if (typeof reason === "object") {
-                    reason.type = "close";
-                }
-                this.onclose(reason);
+                const ev = { ...reason, type: "close" } as CloseEvent;
+                this.onclose(ev);
                 // this.onclose(new CloseEvent("close", {
                 //     /** Warn: incorrect */
                 //     wasClean: true,
@@ -105,7 +98,7 @@ export const UniWebSocket: WebSocketConstructor =  class UniSocket implements We
         });
         socket.onMessage((result) => {
             if (this.onmessage) {
-                const ev = { type: "message", data: result.data } as MessageEvent;
+                const ev = { type: "message", data: result.data } as MessageEvent<string | ArrayBuffer>;
                 this.onmessage(ev);
             }
         });
@@ -119,19 +112,19 @@ export const UniWebSocket: WebSocketConstructor =  class UniSocket implements We
     // tslint:disable-next-line:variable-name
     public addEventListener<K extends keyof WebSocketEventMap>(_type: K, _listener: (this: WebSocket, ev: WebSocketEventMap[K]) => any, _options?: boolean | AddEventListenerOptions): void {
         /** empty-implements */
-        throw new Error("UniWebSocket do not implement 'addEventListener' method.");
+        throw new Error("WxWebSocket do not implement 'addEventListener' method.");
     }
     // public addEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void;
     // tslint:disable-next-line:variable-name
     public removeEventListener<K extends keyof WebSocketEventMap>(_type: K, _listener: (this: WebSocket, ev: WebSocketEventMap[K]) => any, _options?: boolean | EventListenerOptions): void {
         /** empty-implements */
-        throw new Error("UniWebSocket do not implement 'removeEventListener' method.");
+        throw new Error("WxWebSocket do not implement 'removeEventListener' method.");
     }
     // public removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
     // tslint:disable-next-line:variable-name
     public dispatchEvent(_event: Event): boolean {
         /** empty-implements */
-        throw new Error("UniWebSocket do not implement 'dispatchEvent' method.");
+        throw new Error("WxWebSocket do not implement 'dispatchEvent' method.");
         // return false;
     }
 

@@ -3,123 +3,128 @@
 
 
 "@dcloudio/types@^2.2.2":
-  version "2.2.4"
-  resolved "https://registry.yarnpkg.com/@dcloudio/types/-/types-2.2.4.tgz#10bf140a90011b5737abafb16a191b4711a89ab1"
-  integrity sha512-MF/Qs8lZnr4cyhav30TwrPohrlIimxB47y/G+djrt2CK4/MJ0tXI6JKWHZK7jYTaqUG6eG1J0KIkix9jIYS6Uw==
+  "integrity" "sha512-mrCMwcINy1IFjU9VUqLeWBkj404yWs5paLDttBcA+eqUjanuUQbBcTVPqlrGgkyzLXDcV2oDDZRSNxNpXi4kMQ=="
+  "resolved" "https://registry.npmjs.org/@dcloudio/types/-/types-2.6.12.tgz"
+  "version" "2.6.12"
 
 "@types/eventsource@^1.0.2":
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/@types/eventsource/-/eventsource-1.0.2.tgz#5f53734831da4748f9a7b394d79d5822ed110924"
-  integrity sha512-CprOekOB/lzAiGDF1MPWHX053RVTCYyYU3M8HOQXpdD0QfXijM//Na/hZxHaQv4ydsiB1uOBQ3p8S5nXpP4nNQ==
+  "integrity" "sha1-X1NzSDHaR0j5p7OU151YIu0RCSQ="
+  "resolved" "https://registry.nlark.com/@types/eventsource/download/@types/eventsource-1.0.2.tgz"
+  "version" "1.0.2"
 
 "@types/jest@^23.3.2":
-  version "23.3.14"
-  resolved "https://registry.yarnpkg.com/@types/jest/-/jest-23.3.14.tgz#37daaf78069e7948520474c87b80092ea912520a"
-  integrity sha512-Q5hTcfdudEL2yOmluA1zaSyPbzWPmJ3XfSWeP3RyoYvS9hnje1ZyagrZOuQ6+1nQC1Gw+7gap3pLNL3xL6UBug==
+  "integrity" "sha1-N9qveAaeeUhSBHTIe4AJLqkSUgo="
+  "resolved" "https://registry.nlark.com/@types/jest/download/@types/jest-23.3.14.tgz?cache=0&sync_timestamp=1619435146390&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40types%2Fjest%2Fdownload%2F%40types%2Fjest-23.3.14.tgz"
+  "version" "23.3.14"
 
 "@types/node@^10.9.4":
-  version "10.9.4"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-10.9.4.tgz#0f4cb2dc7c1de6096055357f70179043c33e9897"
-  integrity sha512-fCHV45gS+m3hH17zgkgADUSi2RR1Vht6wOZ0jyHP8rjiQra9f+mIcgwPQHllmDocYOstIEbKlxbFDYlgrTPYqw==
+  "integrity" "sha1-D0yy3Hwd5glgVTV/cBeQQ8M+mJc="
+  "resolved" "https://registry.nlark.com/@types/node/download/@types/node-10.9.4.tgz"
+  "version" "10.9.4"
 
 "@types/tough-cookie@^2.3.6":
-  version "2.3.6"
-  resolved "https://registry.yarnpkg.com/@types/tough-cookie/-/tough-cookie-2.3.6.tgz#c880579e087d7a0db13777ff8af689f4ffc7b0d5"
-  integrity sha512-wHNBMnkoEBiRAd3s8KTKwIuO9biFtTf0LehITzBhSco+HQI0xkXZbLOD55SW3Aqw3oUkHstkm5SPv58yaAdFPQ==
+  "integrity" "sha1-yIBXngh9eg2xN3f/ivaJ9P/HsNU="
+  "resolved" "https://registry.npm.taobao.org/@types/tough-cookie/download/@types/tough-cookie-2.3.6.tgz"
+  "version" "2.3.6"
 
-abort-controller@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/abort-controller/-/abort-controller-3.0.0.tgz#eaf54d53b62bae4138e809ca225c8439a6efb392"
-  integrity sha512-h8lQ8tacZYnR3vNQTgibj+tODHI5/+l06Au2Pcriv/Gmet0eaj4TwWH41sO9wnHDiQsEj19q0drzdWdeAHtweg==
+"@types/wechat-miniprogram@^3.4.1":
+  "integrity" "sha512-szbuYR32VotxNQNQ4YyQ6Ob3ya0tLY0zpf/xvi6DF8Oqb+0Y+5CL5BpxS+4wBSJvlu3VfSXhjxZ0ze1a3l16Pw=="
+  "resolved" "https://registry.npmjs.org/@types/wechat-miniprogram/-/wechat-miniprogram-3.4.1.tgz"
+  "version" "3.4.1"
+
+"abort-controller@^3.0.0":
+  "integrity" "sha1-6vVNU7YrrkE46AnKIlyEOabvs5I="
+  "resolved" "https://registry.npm.taobao.org/abort-controller/download/abort-controller-3.0.0.tgz"
+  "version" "3.0.0"
   dependencies:
-    event-target-shim "^5.0.0"
+    "event-target-shim" "^5.0.0"
 
-async-limiter@~1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/async-limiter/-/async-limiter-1.0.0.tgz#78faed8c3d074ab81f22b4e985d79e8738f720f8"
-  integrity sha512-jp/uFnooOiO+L211eZOoSyzpOITMXx1rBITauYykG3BRYPu8h0UcxsPNB04RR5vo4Tyz3+ay17tR6JVf9qzYWg==
+"async-limiter@~1.0.0":
+  "integrity" "sha1-3TeelPDbgxCwgpH51kwyCXZmF/0="
+  "resolved" "https://registry.npm.taobao.org/async-limiter/download/async-limiter-1.0.1.tgz"
+  "version" "1.0.1"
 
-es6-denodeify@^0.1.1:
-  version "0.1.5"
-  resolved "https://registry.yarnpkg.com/es6-denodeify/-/es6-denodeify-0.1.5.tgz#31d4d5fe9c5503e125460439310e16a2a3f39c1f"
-  integrity sha1-MdTV/pxVA+ElRgQ5MQ4WoqPznB8=
+"es6-denodeify@^0.1.1":
+  "integrity" "sha1-MdTV/pxVA+ElRgQ5MQ4WoqPznB8="
+  "resolved" "https://registry.npm.taobao.org/es6-denodeify/download/es6-denodeify-0.1.5.tgz"
+  "version" "0.1.5"
 
-es6-promise@^4.2.2:
-  version "4.2.2"
-  resolved "https://registry.yarnpkg.com/es6-promise/-/es6-promise-4.2.2.tgz#f722d7769af88bd33bc13ec6605e1f92966b82d9"
-  integrity sha512-LSas5vsuA6Q4nEdf9wokY5/AJYXry98i0IzXsv49rYsgDGDNDPbqAYR1Pe23iFxygfbGZNR/5VrHXBCh2BhvUQ==
+"es6-promise@^4.2.2":
+  "integrity" "sha1-9yLXdpr4i9M7wT7GYF4fkpZrgtk="
+  "resolved" "https://registry.npm.taobao.org/es6-promise/download/es6-promise-4.2.2.tgz"
+  "version" "4.2.2"
 
-event-target-shim@^5.0.0:
-  version "5.0.1"
-  resolved "https://registry.yarnpkg.com/event-target-shim/-/event-target-shim-5.0.1.tgz#5d4d3ebdf9583d63a5333ce2deb7480ab2b05789"
-  integrity sha512-i/2XbnSz/uxRCU6+NdVJgKWDTM427+MqYbkQzD321DuCQJUqOuJKIA0IM2+W2xtYHdKOmZ4dR6fExsd4SXL+WQ==
+"event-target-shim@^5.0.0":
+  "integrity" "sha1-XU0+vflYPWOlMzzi3rdICrKwV4k="
+  "resolved" "https://registry.npm.taobao.org/event-target-shim/download/event-target-shim-5.0.1.tgz"
+  "version" "5.0.1"
 
-eventsource@^1.0.7:
-  version "1.0.7"
-  resolved "https://registry.yarnpkg.com/eventsource/-/eventsource-1.0.7.tgz#8fbc72c93fcd34088090bc0a4e64f4b5cee6d8d0"
-  integrity sha512-4Ln17+vVT0k8aWq+t/bF5arcS3EpT9gYtW66EPacdj/mAFevznsnyoHLPy2BA8gbIQeIHoPsvwmfBftfcG//BQ==
+"eventsource@^1.0.7":
+  "integrity" "sha1-j7xyyT/NNAiAkLwKTmT0tc7m2NA="
+  "resolved" "https://registry.npm.taobao.org/eventsource/download/eventsource-1.0.7.tgz?cache=0&sync_timestamp=1616041716084&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Feventsource%2Fdownload%2Feventsource-1.0.7.tgz"
+  "version" "1.0.7"
   dependencies:
-    original "^1.0.0"
+    "original" "^1.0.0"
 
-fetch-cookie@^0.7.3:
-  version "0.7.3"
-  resolved "https://registry.yarnpkg.com/fetch-cookie/-/fetch-cookie-0.7.3.tgz#b8d023f421dd2b2f4a0eca9cd7318a967ed4eed8"
-  integrity sha512-rZPkLnI8x5V+zYAiz8QonAHsTb4BY+iFowFBI1RFn0zrO343AVp9X7/yUj/9wL6Ef/8fLls8b/vGtzUvmyAUGA==
+"fetch-cookie@^0.7.3":
+  "integrity" "sha1-uNAj9CHdKy9KDsqc1zGKln7U7tg="
+  "resolved" "https://registry.npm.taobao.org/fetch-cookie/download/fetch-cookie-0.7.3.tgz"
+  "version" "0.7.3"
   dependencies:
-    es6-denodeify "^0.1.1"
-    tough-cookie "^2.3.3"
+    "es6-denodeify" "^0.1.1"
+    "tough-cookie" "^2.3.3"
 
-node-fetch@^2.6.0:
-  version "2.6.0"
-  resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.6.0.tgz#e633456386d4aa55863f676a7ab0daa8fdecb0fd"
-  integrity sha512-8dG4H5ujfvFiqDmVu9fQ5bOHUC15JMjMY/Zumv26oOvvVJjM67KF8koCWIabKQ1GJIa9r2mMZscBq/TbdOcmNA==
+"node-fetch@^2.6.0":
+  "integrity" "sha1-5jNFY4bUqlWGP2dqerDaqP3ssP0="
+  "resolved" "https://registry.npm.taobao.org/node-fetch/download/node-fetch-2.6.0.tgz"
+  "version" "2.6.0"
 
-original@^1.0.0:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/original/-/original-1.0.2.tgz#e442a61cffe1c5fd20a65f3261c26663b303f25f"
-  integrity sha512-hyBVl6iqqUOJ8FqRe+l/gS8H+kKYjrEndd5Pm1MfBtsEKA038HkkdbAl/72EAXGyonD/PFsvmVG+EvcIpliMBg==
+"original@^1.0.0":
+  "integrity" "sha1-5EKmHP/hxf0gpl8yYcJmY7MD8l8="
+  "resolved" "https://registry.npm.taobao.org/original/download/original-1.0.2.tgz"
+  "version" "1.0.2"
   dependencies:
-    url-parse "^1.4.3"
+    "url-parse" "^1.4.3"
 
-psl@^1.1.28:
-  version "1.7.0"
-  resolved "https://registry.yarnpkg.com/psl/-/psl-1.7.0.tgz#f1c4c47a8ef97167dea5d6bbf4816d736e884a3c"
-  integrity sha512-5NsSEDv8zY70ScRnOTn7bK7eanl2MvFrOrS/R6x+dBt5g1ghnj9Zv90kO8GwT8gxcu2ANyFprnFYB85IogIJOQ==
+"psl@^1.1.28":
+  "integrity" "sha1-kyb4vPsBOtzABf3/BWrM4CDlHCQ="
+  "resolved" "https://registry.npm.taobao.org/psl/download/psl-1.8.0.tgz"
+  "version" "1.8.0"
 
-punycode@^2.1.1:
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/punycode/-/punycode-2.1.1.tgz#b58b010ac40c22c5657616c8d2c2c02c7bf479ec"
-  integrity sha512-XRsRjdf+j5ml+y/6GKHPZbrF/8p2Yga0JPtdqTIY2Xe5ohJPD9saDJJLPvp9+NSBprVvevdXZybnj2cv8OEd0A==
+"punycode@^2.1.1":
+  "integrity" "sha1-tYsBCsQMIsVldhbI0sLALHv0eew="
+  "resolved" "https://registry.nlark.com/punycode/download/punycode-2.1.1.tgz"
+  "version" "2.1.1"
 
-querystringify@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/querystringify/-/querystringify-2.0.0.tgz#fa3ed6e68eb15159457c89b37bc6472833195755"
-  integrity sha512-eTPo5t/4bgaMNZxyjWx6N2a6AuE0mq51KWvpc7nU/MAqixcI6v6KrGUKES0HaomdnolQBBXU/++X6/QQ9KL4tw==
+"querystringify@^2.1.1":
+  "integrity" "sha1-M0WUG0FTy50ILY7uTNogFqmu9/Y="
+  "resolved" "https://registry.nlark.com/querystringify/download/querystringify-2.2.0.tgz"
+  "version" "2.2.0"
 
-requires-port@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/requires-port/-/requires-port-1.0.0.tgz#925d2601d39ac485e091cf0da5c6e694dc3dcaff"
-  integrity sha1-kl0mAdOaxIXgkc8NpcbmlNw9yv8=
+"requires-port@^1.0.0":
+  "integrity" "sha1-kl0mAdOaxIXgkc8NpcbmlNw9yv8="
+  "resolved" "https://registry.npm.taobao.org/requires-port/download/requires-port-1.0.0.tgz"
+  "version" "1.0.0"
 
-tough-cookie@^2.3.3:
-  version "2.5.0"
-  resolved "https://registry.yarnpkg.com/tough-cookie/-/tough-cookie-2.5.0.tgz#cd9fb2a0aa1d5a12b473bd9fb96fa3dcff65ade2"
-  integrity sha512-nlLsUzgm1kfLXSXfRZMc1KLAugd4hqJHDTvc2hDIwS3mZAfMEuMbc03SujMF+GEcpaX/qboeycw6iO8JwVv2+g==
+"tough-cookie@^2.3.3":
+  "integrity" "sha1-zZ+yoKodWhK0c72fuW+j3P9lreI="
+  "resolved" "https://registry.npm.taobao.org/tough-cookie/download/tough-cookie-2.5.0.tgz"
+  "version" "2.5.0"
   dependencies:
-    psl "^1.1.28"
-    punycode "^2.1.1"
+    "psl" "^1.1.28"
+    "punycode" "^2.1.1"
 
-url-parse@^1.4.3:
-  version "1.4.3"
-  resolved "https://registry.yarnpkg.com/url-parse/-/url-parse-1.4.3.tgz#bfaee455c889023219d757e045fa6a684ec36c15"
-  integrity sha512-rh+KuAW36YKo0vClhQzLLveoj8FwPJNu65xLb7Mrt+eZht0IPT0IXgSv8gcMegZ6NvjJUALf6Mf25POlMwD1Fw==
+"url-parse@^1.4.3":
+  "integrity" "sha1-1fqYkK+KXh8nSiyYN2UQ9kJfbjs="
+  "resolved" "https://registry.nlark.com/url-parse/download/url-parse-1.5.1.tgz"
+  "version" "1.5.1"
   dependencies:
-    querystringify "^2.0.0"
-    requires-port "^1.0.0"
+    "querystringify" "^2.1.1"
+    "requires-port" "^1.0.0"
 
-ws@^6.0.0:
-  version "6.0.0"
-  resolved "https://registry.yarnpkg.com/ws/-/ws-6.0.0.tgz#eaa494aded00ac4289d455bac8d84c7c651cef35"
-  integrity sha512-c2UlYcAZp1VS8AORtpq6y4RJIkJ9dQz18W32SpR/qXGfLDZ2jU4y4wKvvZwqbi7U6gxFQTeE+urMbXU/tsDy4w==
+"ws@^6.0.0":
+  "integrity" "sha1-6qSUre0ArEKJ1FW6yNhMfGUc7zU="
+  "resolved" "https://registry.nlark.com/ws/download/ws-6.0.0.tgz"
+  "version" "6.0.0"
   dependencies:
-    async-limiter "~1.0.0"
+    "async-limiter" "~1.0.0"
