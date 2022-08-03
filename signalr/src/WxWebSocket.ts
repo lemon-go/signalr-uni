@@ -98,7 +98,7 @@ export const WxWebSocket: WebSocketConstructor =  class WxSocket implements WebS
         });
         socket.onMessage((result) => {
             if (this.onmessage) {
-                const ev = { type: "message", data: result.data } as MessageEvent<string | ArrayBuffer>;
+                const ev = { type: "message", data: result.data } as MessageEvent;
                 this.onmessage(ev);
             }
         });

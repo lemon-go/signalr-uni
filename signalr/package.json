@@ -1,6 +1,6 @@
 {
   "name": "signalr-uni",
-  "version": "5.1.0",
+  "version": "5.1.1",
   "description": "ASP.NET Core SignalR Client(5.0.5)",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
@@ -30,7 +30,10 @@
   "keywords": [
     "signalr",
     "aspnetcore",
-    "uni-app"
+    "uni-app",
+    "miniprogram",
+    "wechat",
+    "mp"
   ],
   "repository": {
     "type": "git",
@@ -43,8 +46,7 @@
   },
   "homepage": "https://github.com/lemon-go/signalr-uni/tree/main/signalr#readme",
   "files": [
-    "dist/**/*",
-    "src/**/*"
+    "dist/**/*"
   ],
   "devDependencies": {
     "@dcloudio/types": "^2.2.2",

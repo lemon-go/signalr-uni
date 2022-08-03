@@ -1,4 +1,4 @@
-JavaScript and TypeScript clients(compatible with [DCloud/uni-app](https://uniapp.dcloud.io/) platform) for SignalR for ASP.NET Core and Azure SignalR Service.
+JavaScript and TypeScript clients(compatible with [DCloud/uni-app](https://uniapp.dcloud.io/) and [Wechat Miniprogram](https://developers.weixin.qq.com/miniprogram/dev/api/network/websocket/SocketTask.html) platform) for SignalR for ASP.NET Core and Azure SignalR Service.
 
 ## Installation
 
@@ -11,6 +11,10 @@ npm install signalr-uni
 See the [SignalR Documentation](https://docs.microsoft.com/aspnet/core/signalr) at docs.microsoft.com for documentation on the latest release. [API Reference Documentation](https://docs.microsoft.com/javascript/api/%40aspnet/signalr/?view=signalr-js-latest) is also available on docs.microsoft.com.
 
 For documentation on using this client with Azure SignalR Service and Azure Functions, see the [SignalR Service serverless developer guide](https://docs.microsoft.com/azure/azure-signalr/signalr-concept-serverless-development-config).
+
+### Wechat Miniprogram
+To use the client in a MP(Wechat) application, install the package to your `node_modules` folder and use `import { /*MODULE NAME*/ } from 'signalr-uni'` or `require('signalr-uni')` to load the module (Remember to build NPM).
+
 
 ### UniApp
 
